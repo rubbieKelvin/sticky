@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sticky | Copy</title>
+
+    <script>
+      function copy() {
+        navigator.clipboard.writeText("{{ text }}");
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Get yo pasted text</h1>
+
+    {% if deleted %}
+    <p>*<i>View-once</i></p>
+    {% endif %}
+    <hr />
+
+    <button onclick="copy()">copy</button>
+    <pre>{{text}}</pre>
+  </body>
+</html>

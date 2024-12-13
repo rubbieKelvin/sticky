@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sticky | Info</title>
+
+    <script>
+      function copy() {
+        navigator.clipboard.writeText("{{ url }}");
+      }
+      function go() {
+        open(window.location.protocol+"//{{ url }}", "_self");
+      }
+    </script>
+  </head>
+  <body>
+    <h3>Here's your link</h3>
+    <hr />
+    <p>{{url}}</p>
+    <hr />
+    <div>
+      <button onclick="copy()">Copy</button>
+      <button onclick="go()">Open</button>
+    </div>
+  </body>
+</html>
